@@ -1,13 +1,27 @@
-public class Entradas implements Platillo{ 
+
+    /**
+     * Clase que representa a las comidas implementando la interfaz Platillo 
+     * y sus metodos de la interfaz 
+     */
+    public class Entradas implements Platillo{ 
 
     /**
      * Atributos de la clase 
      */
 
+    /**
+     * Representa a el nombre del platillo
+     */
     private String nombre;
 
+    /**
+     * Representa a la descripcion del platillo
+     */
     private String descripcion;
 
+    /**
+     * Representa el precio del platillo
+     */
     private int costo;
 
     /**
@@ -15,16 +29,23 @@ public class Entradas implements Platillo{
      */
 
     /**
-     * 
+     * Metodo que regresa el nombre del platillo
+     * @return String con valor a como se llama la comida 
      */
     public String getNombre(){
         return nombre;
     }
 
+    /**
+     * Retorna la descripcion de la comida
+     */
     public String getDescripcion(){
         return descripcion;
     }
 
+    /**
+     * 
+     */
     public int getCosto(){
         return costo;
     }
