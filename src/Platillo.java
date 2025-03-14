@@ -25,6 +25,12 @@
     private int costo;
 
     /**
+     * Represent asi el platillo es entrada, platillo fuerte o postre
+     */
+
+    private String tipoPlatillo;
+
+    /**
      * Metodos de la clase 
      */
 
@@ -44,10 +50,19 @@
     }
 
     /**
-     * 
+     * Represa el costo del platillo
+     * @return int con valor al costo del platillo 
      */
     public int getCosto(){
         return costo;
+    }
+    
+    /**
+     * regresa el tipo de platillo que es (entrada, platillo fuerte o postre
+     * @return String con valor a tipo de platillo que es 
+     */
+    public String getTipoPlatillo(){
+        return tipoPlatillo;
     }
 
 
