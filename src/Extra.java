@@ -1,4 +1,4 @@
-public abstract class Extra implements Platillo{
+public abstract class Extra extends Platillo{
 
     protected Platillo platilloCentro;
 
