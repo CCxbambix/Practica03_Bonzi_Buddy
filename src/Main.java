@@ -3,7 +3,10 @@
  */
 public class Main {
     public static void main(String[] args) {
-        MenuHelados menu = new MenuHelados();
-        menu.mostrarMenu();
+        // MenuHelados menu = new MenuHelados();
+        // menu.mostrar
+        Menu menu = new Menu();
+        menu.showMenu();
+    
     }
 }

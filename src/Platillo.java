@@ -6,12 +6,15 @@
     public class Platillo { 
 
     /**
-     * Atributos de la clase 
-     */
-
-    /**
      * Representa a el nombre del platillo
      */
+    public Platillo(){
+        nombre = "";
+        costo = 0;
+        descripcion = "";
+        tipoPlatillo = "";
+    }
+    
     protected String nombre;
 
     /**

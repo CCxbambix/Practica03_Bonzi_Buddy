@@ -1,6 +1,6 @@
 public class PayDeLimon extends Platillo{
 
-    public PayDeLimon(String nombre, String deString, int costo, String tipoPlatillo){
+    public PayDeLimon(){
         nombre = "Pay de limon";
         descripcion = "Cremoso pay de limón con base de galleta y merengue suizo flambeado";
         costo = 125;

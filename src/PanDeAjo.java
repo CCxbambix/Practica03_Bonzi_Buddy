@@ -4,6 +4,6 @@ public class PanDeAjo extends Platillo{
         nombre = "Pan de ajo";
         descripcion = "Delicioso pan crujiente bañado en mantequilla de ajo y especias";
         costo = 100;
-        tipoPlatillo = "Plato fuerte";
+        tipoPlatillo = "Entrada";
     }
 }
