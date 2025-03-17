@@ -1,4 +1,5 @@
 public class EmpanizadoFlaminHot extends Extra{
+    Platillo platillo;
 
     public EmpanizadoFlaminHot (Platillo platilloCentro){
         super(platilloCentro);

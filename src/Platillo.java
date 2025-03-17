@@ -3,7 +3,7 @@
      * Clase que representa a las comidas implementando la interfaz Platillo 
      * y sus metodos de la interfaz 
      */
-    public abstract class Platillo { 
+    public class Platillo { 
 
     /**
      * Atributos de la clase 
@@ -12,23 +12,23 @@
     /**
      * Representa a el nombre del platillo
      */
-    private String nombre;
+    protected String nombre;
 
     /**
      * Representa a la descripcion del platillo
      */
-    private String descripcion;
+    protected String descripcion;
 
     /**
      * Representa el precio del platillo
      */
-    private int costo;
+    protected int costo;
 
     /**
      * Represent asi el platillo es entrada, platillo fuerte o postre
      */
 
-    private String tipoPlatillo;
+    protected String tipoPlatillo;
 
     /**
      * Metodos de la clase 
