@@ -5,8 +5,8 @@ public class EmpanizadoFlaminHot extends Extra{
         super(platilloCentro);
     }
 
-    public String getDescripcion(){
-        return platilloCentro.getDescripcion() + ",Empanizado Flaming Hot";
+    public String getNombre(){
+        return platilloCentro.getNombre() + ",Empanizado Flaming Hot";
     }
 
     public int getCosto(){

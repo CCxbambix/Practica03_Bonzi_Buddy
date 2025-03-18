@@ -11,10 +11,10 @@ public abstract class Extra extends Platillo{
     }
 
     public String getDescripcion(){
-        return platilloCentro.getDescripcion();
+        return platilloCentro .getDescripcion();
     }
 
     public int getCosto(){
         return platilloCentro.getCosto();
-    }
+    }   
 }

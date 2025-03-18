@@ -4,8 +4,8 @@ public class Vegano extends Extra{
         super(platilloCentro);
     }
 
-    public String getDescripcion(){
-        return platilloCentro.getDescripcion() + ",Vegano";
+    public String getNombre(){
+        return platilloCentro.getNombre() + ", Vegano";
     }
 
     public int getCosto(){

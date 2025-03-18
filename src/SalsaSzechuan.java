@@ -4,8 +4,8 @@ public class SalsaSzechuan extends Extra{
         super(platilloCentro);
     }
 
-    public String getDescripcion(){
-        return platilloCentro.getDescripcion() + ",Salsa Szechuan";
+    public String getNombre(){
+        return platilloCentro.getNombre() + ", Salsa Szechuan";
     }
 
     public int getCosto(){

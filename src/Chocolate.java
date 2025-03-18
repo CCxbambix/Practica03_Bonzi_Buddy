@@ -4,8 +4,8 @@ public class Chocolate extends Extra{
         super(platilloCentro);
     }
 
-    public String getDescripcion(){
-        return platilloCentro.getDescripcion() + ",Chocolate";
+    public String getNombre(){
+        return platilloCentro.getNombre() + ", Chocolate extra";
     }
 
     public int getCosto(){

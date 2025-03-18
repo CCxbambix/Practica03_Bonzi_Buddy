@@ -4,8 +4,8 @@ public class SinGluten extends Extra{
         super(platilloCentro);
     }
 
-    public String getDescripcion(){
-        return platilloCentro.getDescripcion() + ", Sin Gluten ";
+    public String getNombre(){
+        return platilloCentro.getNombre() + ", Sin Gluten ";
     }
 
     public int getCosto(){
