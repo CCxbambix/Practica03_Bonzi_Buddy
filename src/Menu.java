@@ -1,4 +1,5 @@
 
+import java.lang.reflect.Array;
 import java.text.ParsePosition;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +65,7 @@ public class Menu {
      * @return El platillo seleccionado
      */
     public Platillo getEntrada(){
-        System.out.println("Por favor, selecciona una entrada\n");
+        System.out.println("\nPor favor, selecciona una entrada\n");
         return getPlatillo(entradas);
 
     }
@@ -74,7 +75,7 @@ public class Menu {
      * @return El platillo seleccionado
      */
     public Platillo getPlatoFuerte(){
-        System.out.println("Por favor, selecciona un plato fuerte\n");
+        System.out.println("\nPor favor, selecciona un plato fuerte\n");
         return getPlatillo(platosFuertes);
 
     }
@@ -84,7 +85,7 @@ public class Menu {
      * @return El platillo seleccionado
      */
     public Platillo getPostre(){
-        System.out.println("Por favor, selecciona un postre\n");
+        System.out.println("\nPor favor, selecciona un postre\n");
         return getPlatillo(postres);
 
     }
@@ -103,10 +104,11 @@ public class Menu {
         }
         int eleccion = 0;
         String opcion = sc.nextLine();
+
         try {
             eleccion = Integer.parseInt(opcion);            
         } catch (Exception e) {
-            System.out.println("Elije una opción válida");
+            System.out.println("\nElije una opción válida");
             return getPlatillo(platillos);
         }
         Platillo plato = platillos.get(eleccion-1);
@@ -115,10 +117,10 @@ public class Menu {
 
     public Extra getExtraSalado(Platillo platillo){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Elije un extra de tu preferencia");
+        System.out.println("\nElije un extra de tu preferencia");
         System.out.println("1) Aceite Olivo\n2) Aderezo Ranch\n3) Nueces");
         System.out.println("4) Empanizado Flaming Hot\n5) Queso\n6) Salsa Mango Habanero");
-        System.out.println("7) Salsa Szechuan\n 8)nadota");
+        System.out.println("7) Salsa Szechuan\n8) Nadota");
 
         String opcion = sc.nextLine();
         int eleccion = 0;
@@ -126,7 +128,7 @@ public class Menu {
         try {
             eleccion = Integer.parseInt(opcion);
         } catch (Exception e) {
-            System.out.println("Elije una opción válida");
+            System.out.println("\nElije una opción válida");
             return getExtraSalado(platillo);
         }
 
@@ -148,15 +150,15 @@ public class Menu {
             case 8:
                 return new Vacio(platillo);
             default:
-                System.out.println("Elije una opción válida");
+                System.out.println("\nElije una opción válida");
                 return getExtraSalado(platillo);
         }
     }
 
     public Extra getExtraPostre (Platillo platillo){
         Scanner sc = new Scanner (System.in);
-        System.out.println("Elije el extra de tu preferencia");
-        System.out.println("1) Chocolate\n2) Meremelada\n3) Nueces");
+        System.out.println("\nElije el extra de tu preferencia");
+        System.out.println("1) Chocolate\n2) Meremelada\n3) Nueces\n4) nadota");
 
         String opcion = sc.nextLine();
         int eleccion = 0;
@@ -164,7 +166,7 @@ public class Menu {
         try {
             eleccion = Integer.parseInt(opcion);
         } catch (Exception e) {
-            System.out.println("Elije una opción válida");
+            System.out.println("\nElije una opción válida");
             return getExtraPostre(platillo);
         }
 
@@ -175,9 +177,42 @@ public class Menu {
                 return new Mermelada(platillo);
             case 3:
                 return new Nueces(platillo);
+            case 4:
+                return new Vacio(platillo);
             default:
-                System.out.println("Elije una opción válida");
+                System.out.println("\nElije una opción válida");
                 return getExtraPostre(platillo);
         }
-    } 
+    }
+
+    public Extra getExtraModalidad(Platillo platillo){
+        Scanner sc = new Scanner (System.in);
+        ArrayList<Extra> modos;
+        System.out.println("\nPor favor selecciona si requieres un tipo de comida especial");
+        System.out.println("1) Vegetariano\n2) Vegano\n3) Sin gluten\n4) Nadota");
+
+        String opcion = sc.nextLine();
+        int eleccion = 0;
+
+        try {
+            eleccion = Integer.parseInt(opcion);
+        } catch (Exception e) {
+            System.out.println("\nElije una opción válida");
+            return getExtraModalidad(platillo);
+        }
+
+        switch (eleccion) {
+            case 1:
+                return new Vegetariano(platillo);
+            case 2:
+                return new Vegano(platillo);
+            case 3:
+                return new SinGluten(platillo);
+            case 4:
+                return new Vacio(platillo);
+            default:
+                System.out.println("\nElije una opción válida");
+                return getExtraModalidad(platillo);
+        }
+    }
 }

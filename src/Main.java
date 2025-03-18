@@ -18,10 +18,15 @@ public class Main {
         menu.showMenu();
 
         entrada = menu.getEntrada();
+        entrada = añadirExtra(entrada,menu,3);
         entrada = añadirExtra(entrada, menu, 1);
+
         platoFuerte = menu.getPlatoFuerte();
+        platoFuerte = añadirExtra(platoFuerte,menu,3);
         platoFuerte = añadirExtra(platoFuerte, menu, 1);
+
         postre = menu.getPostre();
+        postre = añadirExtra(postre,menu,3);
         postre = añadirExtra(postre, menu, 2);
 
         System.out.println("\nPedido realizado:");
@@ -46,8 +51,14 @@ public class Main {
     }
 
     public static Platillo añadirExtra(Platillo platillo, Menu menu, int tipoExtra){
+        String mensaje;
         String eleccion;
         Scanner sc = new Scanner(System.in);
+        mensaje = (tipoExtra == 3)? "Desea añadir una restriccion aliminticia y/n?" : "Desea añadir un extra y/n";
+        System.out.println(mensaje);
+        eleccion = sc.nextLine();
+        if (!eleccion.toLowerCase().contains("y")) return platillo;
+
         do{
             switch (tipoExtra) {
                 case 1:
@@ -57,16 +68,18 @@ public class Main {
                     platillo =  menu.getExtraPostre(platillo);
                     break;
                 case 3:
-                    platillo = new Vacio(platillo);
+                    platillo = menu.getExtraModalidad(platillo);
                     break;
                 default:
                     platillo = new Vacio(platillo);
                     break;
             }
-            System.out.println("Desea agregar otro extra? y/n");
+            mensaje = (tipoExtra == 3)? "¿Deseas añadir otra restricción alimenticia? y/n" : "¿Deseas añadir otro extra? y/n";
+            System.out.println(mensaje);
             eleccion = sc.nextLine();
-            if (eleccion.toLowerCase().contains("n")) break;
+            if (!eleccion.toLowerCase().contains("y")) break;
         } while (true);
+
         return platillo;
     }
 }
