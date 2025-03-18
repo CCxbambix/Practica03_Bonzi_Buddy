@@ -101,10 +101,83 @@ public class Menu {
             System.out.println(i +". " + plato.getNombre());
             i++;
         }
+        int eleccion = 0;
         String opcion = sc.nextLine();
-        int eleccion = Integer.parseInt(opcion);
+        try {
+            eleccion = Integer.parseInt(opcion);            
+        } catch (Exception e) {
+            System.out.println("Elije una opción válida");
+            return getPlatillo(platillos);
+        }
         Platillo plato = platillos.get(eleccion-1);
         return plato;
     }
-    
+
+    public Extra getExtraSalado(Platillo platillo){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Elije un extra de tu preferencia");
+        System.out.println("1) Aceite Olivo\n2) Aderezo Ranch\n3) Nueces");
+        System.out.println("4) Empanizado Flaming Hot\n5) Queso\n6) Salsa Mango Habanero");
+        System.out.println("7) Salsa Szechuan\n 8)nadota");
+
+        String opcion = sc.nextLine();
+        int eleccion = 0;
+
+        try {
+            eleccion = Integer.parseInt(opcion);
+        } catch (Exception e) {
+            System.out.println("Elije una opción válida");
+            return getExtraSalado(platillo);
+        }
+
+        switch (eleccion) {
+            case 1:
+                return new AceiteOlivo(platillo);
+            case 2:
+                return new AderezoRanch(platillo);
+            case 3:
+                return new Nueces(platillo);
+            case 4:
+                return new EmpanizadoFlaminHot(platillo);
+            case 5:
+                return new Queso(platillo);
+            case 6:
+                return new SalsaMangoHabanero(platillo);
+            case 7: 
+                return new SalsaSzechuan(platillo);
+            case 8:
+                return new Vacio(platillo);
+            default:
+                System.out.println("Elije una opción válida");
+                return getExtraSalado(platillo);
+        }
+    }
+
+    public Extra getExtraPostre (Platillo platillo){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Elije el extra de tu preferencia");
+        System.out.println("1) Chocolate\n2) Meremelada\n3) Nueces");
+
+        String opcion = sc.nextLine();
+        int eleccion = 0;
+
+        try {
+            eleccion = Integer.parseInt(opcion);
+        } catch (Exception e) {
+            System.out.println("Elije una opción válida");
+            return getExtraPostre(platillo);
+        }
+
+        switch (eleccion) {
+            case 1:
+                return new Chocolate(platillo);
+            case 2:
+                return new Mermelada(platillo);
+            case 3:
+                return new Nueces(platillo);
+            default:
+                System.out.println("Elije una opción válida");
+                return getExtraPostre(platillo);
+        }
+    } 
 }
