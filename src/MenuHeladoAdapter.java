@@ -9,11 +9,11 @@ public class MenuHeladoAdapter extends Menu {
     }
     
     /**
-     * Muestra el menú de helados utilizando la estructura del Menu
+     * Muestra el menu de helados utilizando la estructura del Menu
      */
     @Override
     public void showMenu() {
-        System.out.println("\n--- MENÚ DE HELADOS ---");
+        System.out.println("\n------ MENU DE HELADOS ------");
         menuHelados.mostrarMenu();
     }
 }
