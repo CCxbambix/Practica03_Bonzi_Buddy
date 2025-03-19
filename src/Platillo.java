@@ -7,14 +7,7 @@
 
     /**
      * Representa a el nombre del platillo
-     */
-    public Platillo(){
-        nombre = "";
-        costo = 0;
-        descripcion = "";
-        tipoPlatillo = "";
-    }
-    
+     */    
     protected String nombre;
 
     /**
@@ -36,6 +29,16 @@
     /**
      * Metodos de la clase 
      */
+
+    /**
+     * Metodo constructor de la clase
+     */
+    public Platillo(){
+    nombre = "";
+    costo = 0;
+    descripcion = "";
+    tipoPlatillo = "";
+    }
 
     /**
      * Metodo que regresa el nombre del platillo

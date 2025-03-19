@@ -3,7 +3,6 @@
  * Extiende la clase Extra
  */
 public class EmpanizadoFlaminHot extends Extra{
-    Platillo platillo;
 
 
     /**
