@@ -1,7 +1,6 @@
 Platillo solicitado
-Entrada
-Ensalada
-Plato fuerte
-Milanesa, Vegetariano
-Postre
-Tapioca, Nueces extra, Nueces extra
+Entrada: Pan de ajo
+Plato fuerte: Pastor
+Postre (menú normal): Tapioca
+Postre (heladería): Pastel de chocolate
+Total: $830.0
